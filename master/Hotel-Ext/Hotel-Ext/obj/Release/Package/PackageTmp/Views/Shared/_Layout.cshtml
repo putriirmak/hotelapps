@@ -1,0 +1,236 @@
+﻿<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>EXT Hotel a 4 Star Hotel located in Bandung, Indonesia</title>
+    <!-- for-mobile-apps -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Classic Hotel Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+    <script type="application/x-javascript">
+        addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+               function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!-- //for-mobile-apps -->
+    @Styles.Render("~/Content/css")
+    <!--images-->
+    @Styles.Render("~/images")
+    <!-- // images-->
+
+    <!-- js -->
+    @Styles.Render("~/bundles/jquery")
+    <!-- //js -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+    <!-- start-smoth-scrolling -->
+    <script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){
+					event.preventDefault();
+					$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+				});
+			});
+    </script>
+    <!-- start-smoth-scrolling -->
+</head>
+<body>
+
+    <!-- banner -->
+    <div class="banner">
+        <div class="container">
+            <div class="header-nav">
+                <div class="logo">
+                    <h1><a href="index.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>Classic Hotel</a></h1>
+                </div>
+                @Html.Partial("_LoginPartial")
+                <div class="navigation">
+                    <span class="menu"><img src="images/menu.png" alt="" /></span>
+                    
+                    <nav class="cl-effect-11" id="cl-effect-11">
+                       
+                        <ul class="nav1">
+                            <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                            <li>@Html.ActionLink("About", "About", "Home")</li>
+                            <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                            <li>@Html.ActionLink("Reservation", "Create", "Reservations")</li>
+                            
+                        </ul>
+                        
+                    </nav>
+                    <!-- script for menu -->
+                    <script>
+
+						$( "span.menu" ).click(function() {
+						$( "ul.nav1" ).slideToggle( 300, function() {
+						 // Animation complete.
+						});
+						});
+                    </script>
+                    <!-- //script for menu -->
+
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="banner-info">
+                <script src="Scripts/responsiveslides.min.js"></script>
+                <script>
+									// You can also use "$(window).load(function() {"
+									$(function () {
+									 // Slideshow 4
+									$("#slider3").responsiveSlides({
+										auto: true,
+										pager: false,
+										nav: false,
+										speed: 500,
+										namespace: "callbacks",
+										before: function () {
+									$('.events').append("<li>before event fired.</li>");
+									},
+									after: function () {
+										$('.events').append("<li>after event fired.</li>");
+										}
+										});
+										});
+                </script>
+                <div id="top" class="callbacks_container">
+                    <ul class="rslides" id="slider3">
+                        <li>
+                            <div class="banner-text">
+                                @*<h3>WELCOME</h3>*@
+                                <h4>EXCELLENT SERVICES WITH BEST PRICE</h4>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="banner-text">
+                                @*<h3>WELCOME</h3>*@
+                                <h4>RELAX AND EXPERIENCE SOMETHING NEW</h4>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="banner-text">
+                                @*<h3>WELCOME</h3>*@
+                                <h4>FIND YOUR IDEAL HOLIDAY ON EXT HOTEL</h4>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            @*<div class="banner-bottom">
+                <div class="droop-down">
+                    <div class="droop">
+                        <div class="sort-by">
+                            <select class="sel">
+                                <option value="">CHOOSE YOUR HOTEL</option>
+                                <option value="">TAJ CLUB HOUSE</option>
+                                <option value="">TRIDENT GRAND</option>
+                                <option value="">THE PARK POD</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="radio-btns">
+                        <div class="swit">
+                            <div class="check_box"> <div class="radio"> <label><input type="radio" name="radio" checked=""><i></i>Daily</label> </div></div>
+                            <div class="check_box"> <div class="radio"> <label><input type="radio" name="radio"><i></i>Hourly</label> </div></div>
+                        </div>
+                    </div>
+                    <div class="search">
+                        <form action="search.html">
+                            <input type="submit" value="search">
+                        </form>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>*@
+        </div>
+    </div>
+    <!-- //banner -->
+
+    <!-- facilities -->
+    <div class="facilities">
+        <div class="container">
+            <div class="facilities-grids">
+                <div class="container body-content">
+                    @RenderBody()
+                    <hr />
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+    <!-- //facilities -->
+
+    <!--footer-->
+    <div class="footer">
+        <div class="container">
+            <div class="col-md-3 ftr_navi ftr">
+                <h3>NAVIGATION</h3>
+                <ul>
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("About", "About", "Home")</li>
+                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("Reservation", "Index", "Reservations")</li>
+                </ul>
+            </div>
+            <div class="col-md-3 ftr_navi ftr">
+                <h3>FACILITIES</h3>
+                <ul>
+                    <li><a href="#">Double bedrooms</a></li>
+                    <li><a href="#">Single bedrooms</a></li>
+                    <li><a href="#">Royal facilities</a></li>
+                    <li><a href="#">Connected rooms</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3 ftr_navi ftr">
+                <h3>GET IN TOUCH</h3>
+                <ul>
+                    <li>Ola-ola street jump,</li>
+                    <li>260-14 City, Country</li>
+                    <li>+62 000-0000-00</li>
+                </ul>
+            </div>
+            <div class="col-md-3 ftr-logo">
+                <a href="index.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>EXT Hotel</a>
+                <ul>
+                    <li><a href="#" class="f1"> </a></li>
+                    <li><a href="#" class="f2"> </a></li>
+                    <li><a href="#" class="f3"> </a></li>
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+    <!--footer-->
+    <!-- copy -->
+    <div class="copy-right">
+        <div class="container">
+            <p> &copy; 2015 EXT Hotel</a></p>
+        </div>
+    </div>
+    <!-- //copy -->
+    <!-- for bootstrap working -->
+    @RenderSection("scripts", required: false)
+    @Scripts.Render("~/bundles/jquery")
+    <script src="Scripts/bootstrap.js"></script>
+    <!-- //for bootstrap working -->
+    <!-- smooth scrolling -->
+    <script type="text/javascript">
+		$(document).ready(function() {
+		/*
+			var defaults = {
+			containerID: 'toTop', // fading element id
+			containerHoverID: 'toTopHover', // fading element hover id
+			scrollSpeed: 1200,
+			easingType: 'linear'
+			};
+		*/
+		$().UItoTop({ easingType: 'easeOutQuart' });
+		});
+    </script>
+    <a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+    <!-- //smooth scrolling -->
+</body>
+</html>
