@@ -17,7 +17,7 @@ namespace Hotel.Models
 
         public BedRoomType BedroomType { get; set; }
 
-        public ICollection<BedroomReservation> BedroomReservations { get; set; }
+        //public ICollection<BedroomReservation> BedroomReservations { get; set; }
         
     }
 }

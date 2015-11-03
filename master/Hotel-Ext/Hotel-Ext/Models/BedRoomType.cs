@@ -14,5 +14,6 @@ namespace Hotel.Models
         public string BedRoomName { get; set; }
         public string ImageBedroom { get; set; }
         public long SizeRoom { get; set; }
+        public Decimal BedRoomPrice { get; set; }
     }
 }
