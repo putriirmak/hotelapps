@@ -21,7 +21,7 @@ namespace Hotel_Ext.Models
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext()
-            : base("DefaultConnection", throwIfV1Schema: false)
+            : base("Hotel_ExtContext", throwIfV1Schema: false)
         {
         }
 

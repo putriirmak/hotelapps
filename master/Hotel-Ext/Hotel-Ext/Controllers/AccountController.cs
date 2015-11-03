@@ -79,7 +79,13 @@ namespace Hotel_Ext.Controllers
             switch (result)
             {
                 case SignInStatus.Success:
-                    return RedirectToLocal(returnUrl);
+                   if (model.Email == "admin@admin.com")
+                   {
+                        return RedirectToAction("IndexAdmin", "Home");
+                    }
+                   else {
+                        return RedirectToLocal(returnUrl);
+                  }
                 case SignInStatus.LockedOut:
                     return View("Lockout");
                 case SignInStatus.RequiresVerification:

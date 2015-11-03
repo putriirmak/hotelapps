@@ -1,0 +1,38 @@
+﻿@{
+    ViewBag.Title = "Admin Dashboard";
+}
+
+<div class="gallery">
+    <div class="container">
+        <h2 class="tittle-one">@ViewBag.Title.</h2>
+        <!--div><p>@ViewBag.Message</p></div-->
+        <div class="services-bottom-grids">
+            <div class="col-md-4 services-bottom-grid">
+                <!--div class="services-bottom-grd-left wel-grid">
+                    <div class="time-service">
+                        <figure class="icon">
+                            <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+                        </figure>
+                    </div>
+                </div-->
+                <div class="services-bottom-grd-right">
+                    <h4>Our Office : </h4>
+                    <p>
+                       
+                        <li>@Html.ActionLink("Master Hotel Info", "Create", "HotelsInfoes")</li>
+                        
+                        <li>@Html.ActionLink("Master Hotel Bank Account", "Index", "BankAccounts")</li>
+
+                        <li>@Html.ActionLink("Master Hotel Facilities", "Index", "Facilities")</li>
+
+                        <li>@Html.ActionLink("Master Hotel Bedroom Type", "Index", "BedRoomTypes")</li>
+
+                        <li>@Html.ActionLink("Master Hotel Rooms", "Index", "Rooms")</li>
+
+                    </p>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+    </div>
+</div>

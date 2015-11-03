@@ -14,7 +14,7 @@ namespace Hotel_Ext
     {
         protected void Application_Start()
         {
-            Database.SetInitializer<Hotel_ExtContext>(new Hotel_ExtInitializer());
+           // Database.SetInitializer<Hotel_ExtContext>(new Hotel_ExtInitializer());
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);

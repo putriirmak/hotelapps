@@ -288,6 +288,7 @@
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\responsiveslides.min.js" />
     <Content Include="Scripts\_references.js" />
+    <Content Include="addTableAuthentication.txt" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -369,6 +370,7 @@
     <Content Include="Views\UserHotels\Details.cshtml" />
     <Content Include="Views\UserHotels\Edit.cshtml" />
     <Content Include="Views\UserHotels\Index.cshtml" />
+    <Content Include="Views\Home\IndexAdmin.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
