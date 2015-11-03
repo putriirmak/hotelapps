@@ -18,7 +18,7 @@ namespace Hotel_Ext.Controllers
         // GET: Reservations
         public ActionResult Index()
         {
-            var reservations = db.Reservations.Include(r => r.UserHotel);
+            var reservations = db.Reservations.Include(r => r.Bedroom).Include(r => r.UserHotel);
             return View(reservations.ToList());
         }
 
@@ -40,6 +40,7 @@ namespace Hotel_Ext.Controllers
         // GET: Reservations/Create
         public ActionResult Create()
         {
+            ViewBag.BedroomId = new SelectList(db.Bedrooms, "Id", "BedroomNumber");
             ViewBag.UserHotelId = new SelectList(db.UserHotels, "Id", "Username");
             return View();
         }
@@ -49,7 +50,7 @@ namespace Hotel_Ext.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,ReservationNo,ReservationStartDate,ReservationEndDate,CheckInTime,CheckOutTime,UserHotelId")] Reservation reservation)
+        public ActionResult Create([Bind(Include = "Id,ReservationNo,ReservationStartDate,ReservationEndDate,CheckInTime,CheckOutTime,totalAmount,UserHotelId,BedroomId")] Reservation reservation)
         {
             if (ModelState.IsValid)
             {
@@ -58,6 +59,7 @@ namespace Hotel_Ext.Controllers
                 return RedirectToAction("Index");
             }
 
+            ViewBag.BedroomId = new SelectList(db.Bedrooms, "Id", "BedroomNumber", reservation.BedroomId);
             ViewBag.UserHotelId = new SelectList(db.UserHotels, "Id", "Username", reservation.UserHotelId);
             return View(reservation);
         }
@@ -74,6 +76,7 @@ namespace Hotel_Ext.Controllers
             {
                 return HttpNotFound();
             }
+            ViewBag.BedroomId = new SelectList(db.Bedrooms, "Id", "BedroomNumber", reservation.BedroomId);
             ViewBag.UserHotelId = new SelectList(db.UserHotels, "Id", "Username", reservation.UserHotelId);
             return View(reservation);
         }
@@ -83,7 +86,7 @@ namespace Hotel_Ext.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,ReservationNo,ReservationStartDate,ReservationEndDate,CheckInTime,CheckOutTime,UserHotelId")] Reservation reservation)
+        public ActionResult Edit([Bind(Include = "Id,ReservationNo,ReservationStartDate,ReservationEndDate,CheckInTime,CheckOutTime,totalAmount,UserHotelId,BedroomId")] Reservation reservation)
         {
             if (ModelState.IsValid)
             {
@@ -91,6 +94,7 @@ namespace Hotel_Ext.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
+            ViewBag.BedroomId = new SelectList(db.Bedrooms, "Id", "BedroomNumber", reservation.BedroomId);
             ViewBag.UserHotelId = new SelectList(db.UserHotels, "Id", "Username", reservation.UserHotelId);
             return View(reservation);
         }
