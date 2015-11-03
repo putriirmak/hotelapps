@@ -14,13 +14,15 @@ namespace Hotel.Models
         [Display(Name = "Reservation Number ")]
         public string ReservationNo { get; set; }
         [Display(Name = "Reserve Date")]
-        public DateTime ReservationStartDate { get; set; }
+        public System.DateTime ReservationStartDate { get; set; }
         [Display(Name = "Until")]
-        public DateTime ReservationEndDate { get; set; }
+        public System.DateTime ReservationEndDate { get; set; }
         [Display(Name = "Check In")]
-        public DateTime CheckInTime { get; set; }
+        public System.DateTime CheckInTime { get; set; }
         [Display(Name = "Check Out")]
-        public DateTime CheckOutTime { get; set; }
+        public System.DateTime CheckOutTime { get; set; }
+        [Display(Name = "Total Amount")]
+        public Decimal totalAmount { get; set; }
         [Display(Name = "Check Out")]
         public int? UserHotelId { get; set; }
 
