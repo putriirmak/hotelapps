@@ -344,11 +344,6 @@
     <Content Include="Views\Facilities\Details.cshtml" />
     <Content Include="Views\Facilities\Edit.cshtml" />
     <Content Include="Views\Facilities\Index.cshtml" />
-    <Content Include="Views\HotelsInfoes\Create.cshtml" />
-    <Content Include="Views\HotelsInfoes\Delete.cshtml" />
-    <Content Include="Views\HotelsInfoes\Details.cshtml" />
-    <Content Include="Views\HotelsInfoes\Edit.cshtml" />
-    <Content Include="Views\HotelsInfoes\Index.cshtml" />
     <Content Include="Views\Payments\Create.cshtml" />
     <Content Include="Views\Payments\Delete.cshtml" />
     <Content Include="Views\Payments\Details.cshtml" />
@@ -370,6 +365,20 @@
     <Content Include="Views\UserHotels\Edit.cshtml" />
     <Content Include="Views\UserHotels\Index.cshtml" />
     <Content Include="Views\Home\IndexAdmin.cshtml" />
+    <Content Include="Views\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Views\HotelsInfoes\Create.cshtml" />
+    <Content Include="Views\HotelsInfoes\Delete.cshtml" />
+    <Content Include="Views\HotelsInfoes\Details.cshtml" />
+    <Content Include="Views\HotelsInfoes\Edit.cshtml" />
+    <Content Include="Views\HotelsInfoes\Index.cshtml" />
+    <None Include="Views\Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Views\Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

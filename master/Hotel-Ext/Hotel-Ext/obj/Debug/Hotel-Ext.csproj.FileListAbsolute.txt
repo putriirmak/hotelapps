@@ -201,6 +201,6 @@ C:\Users\puterisarahn\Source\Repos\hotelapps\master\Hotel-Ext\Hotel-Ext\bin\Micr
 C:\Users\puterisarahn\Source\Repos\hotelapps\master\Hotel-Ext\Hotel-Ext\bin\Microsoft.Owin.Security.Google.xml
 C:\Users\puterisarahn\Source\Repos\hotelapps\master\Hotel-Ext\Hotel-Ext\bin\Microsoft.Owin.Security.Twitter.xml
 C:\Users\puterisarahn\Source\Repos\hotelapps\master\Hotel-Ext\Hotel-Ext\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-C:\Users\puterisarahn\Source\Repos\hotelapps\master\Hotel-Ext\Hotel-Ext\obj\Debug\Hotel-Ext.csprojResolveAssemblyReference.cache
 C:\Users\puterisarahn\Source\Repos\hotelapps\master\Hotel-Ext\Hotel-Ext\obj\Debug\Hotel-Ext.dll
 C:\Users\puterisarahn\Source\Repos\hotelapps\master\Hotel-Ext\Hotel-Ext\obj\Debug\Hotel-Ext.pdb
+C:\Users\puterisarahn\Source\Repos\hotelapps\master\Hotel-Ext\Hotel-Ext\obj\Debug\Hotel-Ext.csprojResolveAssemblyReference.cache

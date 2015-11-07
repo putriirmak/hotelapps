@@ -33,5 +33,5 @@ namespace Hotel.Models
         public UserHotel UserHotel { get; set; }
         public BedRoomType BedroomType { get; set; }
         public Bedroom Bedroom { get; set; }
-        }
+    }
 }

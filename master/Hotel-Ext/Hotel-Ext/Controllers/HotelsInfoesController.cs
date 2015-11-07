@@ -18,7 +18,7 @@ namespace Hotel_Ext.Controllers
         // GET: HotelsInfoes
         public ActionResult Index()
         {
-            return View(db.UserHotels.ToList());
+            return View(db.HotelInfo.ToList());
         }
 
         // GET: HotelsInfoes/Details/5
@@ -28,12 +28,12 @@ namespace Hotel_Ext.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            HotelsInfo hotelsInfo =(HotelsInfo) db.UserHotels.Find(id);
-            if (hotelsInfo == null)
+            HotelsInfo HotelInfo = db.HotelInfo.Find(id);
+            if (HotelInfo == null)
             {
                 return HttpNotFound();
             }
-            return View(hotelsInfo);
+            return View(HotelInfo);
         }
 
         // GET: HotelsInfoes/Create
@@ -47,16 +47,16 @@ namespace Hotel_Ext.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Username,Password,Fullname,Email,Address,PhoneNumber,Description,Stars")] HotelsInfo hotelsInfo)
+        public ActionResult Create([Bind(Include = "Id,Username,Password,Fullname,Email,Address,PhoneNumber,Description,Stars")] HotelsInfo HotelInfo)
         {
             if (ModelState.IsValid)
             {
-                db.UserHotels.Add(hotelsInfo);
+                db.HotelInfo.Add(HotelInfo);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(hotelsInfo);
+            return View(HotelInfo);
         }
 
         // GET: HotelsInfoes/Edit/5
@@ -66,12 +66,12 @@ namespace Hotel_Ext.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            HotelsInfo hotelsInfo = (HotelsInfo)db.UserHotels.Find(id);
-            if (hotelsInfo == null)
+            HotelsInfo HotelInfo = db.HotelInfo.Find(id);
+            if (HotelInfo == null)
             {
                 return HttpNotFound();
             }
-            return View(hotelsInfo);
+            return View(HotelInfo);
         }
 
         // POST: HotelsInfoes/Edit/5
@@ -79,15 +79,15 @@ namespace Hotel_Ext.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Username,Password,Fullname,Email,Address,PhoneNumber,Description,Stars")] HotelsInfo hotelsInfo)
+        public ActionResult Edit([Bind(Include = "Id,Username,Password,Fullname,Email,Address,PhoneNumber,Description,Stars")] HotelsInfo HotelInfo)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(hotelsInfo).State = System.Data.Entity.EntityState.Modified;
+                db.Entry(HotelInfo).State = System.Data.Entity.EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(hotelsInfo);
+            return View(HotelInfo);
         }
 
         // GET: HotelsInfoes/Delete/5
@@ -97,12 +97,12 @@ namespace Hotel_Ext.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            HotelsInfo hotelsInfo = (HotelsInfo)db.UserHotels.Find(id);
-            if (hotelsInfo == null)
+            HotelsInfo HotelInfo = db.HotelInfo.Find(id);
+            if (HotelInfo == null)
             {
                 return HttpNotFound();
             }
-            return View(hotelsInfo);
+            return View(HotelInfo);
         }
 
         // POST: HotelsInfoes/Delete/5
@@ -110,8 +110,8 @@ namespace Hotel_Ext.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            HotelsInfo hotelsInfo = (HotelsInfo)db.UserHotels.Find(id);
-            db.UserHotels.Remove(hotelsInfo);
+            HotelsInfo HotelInfo = db.HotelInfo.Find(id);
+            db.HotelInfo.Remove(HotelInfo);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

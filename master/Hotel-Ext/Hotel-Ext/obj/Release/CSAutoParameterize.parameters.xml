@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <parameters>
-  <parameter name="Hotel_ExtContext-Web.config Connection String" description="Hotel_ExtContext Connection String used in web.config by the application to access the database." defaultValue="Data Source=PUTERISARAHN-PC; Initial Catalog=HotelContextDB; Integrated Security=True;" tags="SqlConnectionString">
-    <parameterEntry kind="XmlFile" scope="D:\\KULIAH\\PemWeb\\Hotel-Ext\\Hotel-Ext\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='Hotel_ExtContext']/@connectionString" />
+  <parameter name="DefaultConnection-Web.config Connection String" description="DefaultConnection Connection String used in web.config by the application to access the database." defaultValue="Data Source=(LocalDb)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\aspnet-Hotel-Ext-20151024085405.mdf;Initial Catalog=aspnet-Hotel-Ext-20151024085405;Integrated Security=True" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\puterisarahn\\Source\\Repos\\hotelapps\\master\\Hotel-Ext\\Hotel-Ext\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
   </parameter>
-  <parameter name="DefaultConnection-Web.config Connection String" description="DefaultConnection Connection String used in web.config by the application to access the database." defaultValue="DefaultConnection_ConnectionString" tags="SqlConnectionString">
-    <parameterEntry kind="XmlFile" scope="D:\\KULIAH\\PemWeb\\Hotel-Ext\\Hotel-Ext\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
+  <parameter name="Hotel_ExtContext-Web.config Connection String" description="Hotel_ExtContext Connection String used in web.config by the application to access the database." defaultValue="Data Source=(localdb)\MSSQLLocalDB; Initial Catalog=Hotel_ExtContext-20151024090644; Integrated Security=True; MultipleActiveResultSets=True; AttachDbFilename=|DataDirectory|Hotel_ExtContext-20151024090644.mdf" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\puterisarahn\\Source\\Repos\\hotelapps\\master\\Hotel-Ext\\Hotel-Ext\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='Hotel_ExtContext']/@connectionString" />
   </parameter>
 </parameters>

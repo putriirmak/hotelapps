@@ -1278,6 +1278,7 @@ h2,
 h3,
 .h3 {
   font-size: 24px;
+  color: #df1e1c;
 }
 h4,
 .h4 {
@@ -2076,7 +2077,7 @@ pre code {
     margin-left: 25%;
   }
   .col-md-offset-2 {
-    margin-left: 31.25%;
+    margin-left: 27%;
   }
   .col-md-offset-1 {
     margin-left: 8.33333333%;
@@ -2971,6 +2972,10 @@ select[multiple].form-group-lg .form-control {
     padding-top: 7px;
     margin-bottom: 0;
     text-align: right;
+    font-size: 14px;
+    font-family: 'Alegreya-Regular';
+    font-weight:500;
+    color:#464646;
   }
 }
 .form-horizontal .has-feedback .form-control-feedback {
